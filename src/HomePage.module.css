@@ -1,0 +1,214 @@
+#section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--main);
+}
+
+.left{
+    flex-basis: 50%;
+    width: 100%;
+    height: 100%;
+    background: var(--main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2.5rem;
+}
+
+
+.left h4{
+    font-size: 4.4rem;
+    letter-spacing: 1px;
+}
+
+.left h1{
+    font-size: 5rem;
+    letter-spacing: 2px;
+}
+
+.left h1 span{
+    color: var(--bgs);
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    text-shadow: 2px 2px 20px var(--lightcolor);
+}
+
+
+.left .description{
+    font-size: 2rem;
+    background: var(--bg);
+    display: inline-block;
+    color: var(--main);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.left .profile{
+    font-size: 1.9rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    margin: 2rem 0;
+    line-height: 25px;
+}
+
+
+.left .box_btn{
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.left button{
+    display: block;
+    width: 25rem;
+    padding: 10px;
+    margin-right: 1.5rem;
+    color: var(--lightcolor);
+    background: transparent;
+    text-transform: capitalize;
+    border: 2px solid var(--lightcolor);
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all ease-in-out 0.3s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px var(--lightcolor);
+    animation: btn infinite 5s linear;
+}
+
+
+
+.left button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+    background: var(--btncolor);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.left .box_btn .cv::before {
+    transform-origin: right;
+    transition: transform 0.5s ease;
+}
+
+
+
+.left button:hover::before {
+    transform: scaleX(1);
+}
+
+.left button:hover{
+    transform: scale(1.1);
+}
+
+
+
+@keyframes btn {
+    0%{
+        border-color: var(--lightcolor);
+    }
+    20%{
+        border-color: var(--bg);
+    }
+
+    50%{
+         border-color: var(--secondary);
+    }
+
+    70%{
+        border-color: var(--textcolor);
+    }
+    100%{
+        border-color: var(--bg);
+    }
+}
+
+.right{
+    flex-basis: 50%;
+    background: var(--bg);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
+}
+
+.right img{
+    margin: 0 auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+@media screen and (max-width: 660px) {
+    #section{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .left, .right{
+        width: 100%;
+    }
+
+    .left{
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #section{
+        width: 100%;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .left, .right{
+        flex-basis: 100%;
+        width: 100%;
+        margin: 0;
+        height: 100vh;
+    }
+    
+    .left h1{
+        font-size: 4rem;
+    }
+
+    .left h1 span{
+        font-size: 5rem;
+    }
+
+    .left .profile{
+        font-size: 1.3rem;
+        width: 100%;
+    }
+
+    .left{
+        padding-top: 2rem;
+    }
+
+    .box_btn{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .box_btn button{
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+}

@@ -1,0 +1,24 @@
+
+:root{
+  --title: "Sora", serif;
+  --text: "Noto Sans", sans-serif;
+  --main: #071952;
+  --secondary: #088395;
+  --textcolor: #37B7C3;
+  --lightcolor: #EBF4F6;
+  --bg: #ECDFCC;
+  --btncolor: #B8001F;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--title);
+  color: var(--lightcolor);
+}
+
+html{
+  font-size: 0.5rem;
+  scroll-behavior: smooth;
+}
