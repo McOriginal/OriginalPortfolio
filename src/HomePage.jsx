@@ -1,5 +1,7 @@
 
 import classes from './HomePage.module.css';
+import NavLinkIcons from './NavLinkIcons';
+
 
 export default function HomPage(){
     return(
@@ -10,8 +12,8 @@ export default function HomPage(){
 
             <div className={classes.contente}>
                 <h4>Salut !</h4>
-                <h1>Je suis <span>Mohamed</span></h1>
-                <p className={classes.description}>Développeur full stack</p>
+                <h1>Je suis, <span></span></h1>
+                <p className={classes.description}> Développeur full stack </p>  
 
                 <p className={classes.profile}>
                 Développeur web avec 3 ans d'expérience en freelance, spécialisé en création de sites front-end et full stack. Maîtrise des technologies HTML, CSS, JavaScript, React.js, Node.js et Flutter pour le développement d'applications Android. 
@@ -19,7 +21,7 @@ export default function HomPage(){
                 </p>
 
                 <div className={classes.box_btn}>
-                    <button>Me connaître</button>
+                    <button>Qui suis-je ?</button>
                     <button className={classes.cv}> Télécharger Mon Cv</button>
                 </div>
             </div>
@@ -30,6 +32,8 @@ export default function HomPage(){
                 <img src="me.png" alt="cisse" />
             </div>
         </section>
+
+        <NavLinkIcons />
         </>
     )
 }

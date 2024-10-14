@@ -17,27 +17,100 @@
     justify-content: center;
     align-items: center;
     padding-left: 2.5rem;
+    opacity: 0;
+    animation: show 2s forwards;
+}
+
+@keyframes show {
+    to{
+        opacity: 1;
+    }
 }
 
 
 .left h4{
     font-size: 4.4rem;
     letter-spacing: 1px;
+    
 }
 
 .left h1{
     font-size: 5rem;
     letter-spacing: 2px;
+    
 }
 
 .left h1 span{
-    color: var(--bgs);
+    color: var(--bg);
     font-size: 6.5rem;
     font-weight: bold;
     text-transform: uppercase;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
-    text-shadow: 2px 2px 20px var(--lightcolor);
+    text-shadow: 2px 0px 25px var(--btncolor);
+    
+}
+
+
+.left h1 span{
+    position: relative;
+    
+}
+
+.left h1 span::before{
+    content: "Mohamed";
+    animation: words 20s infinite;
+}
+
+@keyframes words {
+    0%, 20%{
+        content: 'Mohamed';
+    }
+
+    21%, 40%{
+        content: 'Cissé';
+    }
+
+    41%, 60%{
+        content: 'Mohamed';
+    }
+
+    61%, 80%{
+        content: 'Cissé';
+    }
+
+    81%, 100%{
+        content: 'Mohamed';
+    }
+
+}
+
+.left h1 span::after{
+    content: '';
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background: var(--main);
+    border-left: 2px solid var(--btncolor);
+    right: -8px;
+    animation: cursor 0.3s infinite, typing 20s steps(14) infinite;
+}
+
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid var(--main);
+    }
+}
+
+@keyframes typing {
+    10%, 15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+
+    5%, 20%, 25%, 40%, 45%, 60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
 }
 
 
@@ -48,7 +121,11 @@
     color: var(--main);
     font-weight: 500;
     text-transform: uppercase;
+    
 }
+
+
+
 
 .left .profile{
     font-size: 1.9rem;
@@ -57,13 +134,16 @@
     letter-spacing: 1px;
     margin: 2rem 0;
     line-height: 25px;
+    
 }
+
 
 
 .left .box_btn{
     display: flex;
     align-items: center;
     margin-top: 5rem;
+    
 }
 
 .left button{
@@ -82,7 +162,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0px 0px 5px var(--lightcolor);
-    animation: btn infinite 5s linear;
+    animation: btn infinite 2s linear;
 }
 
 
@@ -145,12 +225,21 @@
     display: flex;
     justify-content: center;
     align-items: self-end;
+    animation: show 2s forwards;
 }
 
 .right img{
     margin: 0 auto;
     width: 100%;
     object-fit: cover;
+    transform: translateY(-60px);
+    animation: showImage 2s forwards;
+}
+
+@keyframes showImage {
+    to{
+        transform: translateY(0);
+    }
 }
 
 
