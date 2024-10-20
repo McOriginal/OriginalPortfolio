@@ -1,9 +1,21 @@
 
+import { useNavigate } from 'react-router-dom';
 import classes from './HomePage.module.css';
 import NavLinkIcons from './NavLinkIcons';
+import { FaDownload } from "react-icons/fa";
+import { FaQuestionCircle } from "react-icons/fa";
 
 
-export default function HomPage(){
+
+export default function HomePage(){
+//  const [navigate, setNavigate] = useNavigate();
+
+//  const  AboutMe = ()=>{
+//     navigate('/dashboard');
+//  }
+
+
+
     return(
         <>
         <section id={classes.section}>
@@ -21,8 +33,8 @@ export default function HomPage(){
                 </p>
 
                 <div className={classes.box_btn}>
-                    <button>Qui suis-je ?</button>
-                    <button className={classes.cv}> Télécharger Mon Cv</button>
+                    <button>Qui suis-je  <FaQuestionCircle /> </button>
+                    <button className={classes.cv}> <FaDownload /> Télécharger Mon Cv</button>
                 </div>
             </div>
 

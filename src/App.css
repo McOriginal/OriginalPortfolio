@@ -18,7 +18,41 @@
   color: var(--lightcolor);
 }
 
+
+
 html{
   font-size: 0.5rem;
   scroll-behavior: smooth;
+}
+
+
+
+.container{
+    width: 90%;
+    height: 100vh;
+}
+
+
+
+.title{
+    font-size: 3.3vw;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1vw;
+    border: 2px dotted var(--main);
+    color: var(--main);
+    margin-bottom: 1.5vw;
+}
+
+
+@media screen and (max-width: 470px) {
+  .title{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .container{
+        width: 100%;
+        overflow: scroll;
+    }
 }

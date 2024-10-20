@@ -1,15 +1,15 @@
 import classes from './AboutPage.module.css';
-import { RiGalleryFill } from "react-icons/ri";
-import { FaAppStoreIos } from "react-icons/fa";
-import { FaCode } from "react-icons/fa";
+
+
 
 export default function AboutPage(){
 
     return(
         <>
-            <div className={classes.container}>
+            <div className='container'>         
+
                 <div className={classes.profile}>
-                    <h1 className={classes.title}> Qui suis-je ?</h1>
+                    <h1 className='title'> Qui suis-je ?</h1>
                 <p className={classes.name}>Je suis <span>Cissé Mohamed,</span> Développeur <span>web/mobile,</span> Full Stack </p>
 
                 <p className={classes.description}>Développeur web avec 3 ans d'expérience en freelance, spécialisé en création de sites front-end et full stack. Maîtrise des technologies HTML, CSS, JavaScript, React.js, Node.js et Flutter pour le développement d'applications Android. Capable de livrer des solutions innovantes et efficaces. 

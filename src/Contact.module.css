@@ -1,0 +1,160 @@
+
+.text{
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.text span{
+    font-size: 2.7rem;
+    color: var(--main);
+    font-weight: 600;
+}
+
+.box{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.box .card{
+    width: 20vw;
+    margin: 0.4rem auto;
+    border: 1px solid var(--bg);
+    border-radius: 1rem;
+    background: var(--main);
+    padding: 0.5rem 1rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
+    transition: all ease-in-out 0.4s;
+    animation: borderr 3s infinite;
+}
+
+@keyframes borderr {
+    0%{
+        border: 1px solid var(--bg);
+    }
+
+    50%{
+        border: 1px solid var(--btncolor);
+    }
+
+    80%{
+        border: 1px solid var(--lightcolor);
+    }
+
+   
+}
+
+.box .card:hover{
+    transform: translateY(-10px);
+}
+
+.box .card h4{
+    font-size: 1.7rem;
+    color: var(--bg);
+    text-transform: capitalize;
+}
+
+.box .card p{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+    line-height: 15px;
+    text-transform: lowercase;
+}
+
+
+.box .card h3{
+    font-size: 1.5rem;
+}
+
+ .card span{
+    color: var(--btncolor);
+    padding: 0 0.4rem;
+}
+
+
+
+.adress{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.adress  .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.item .boxIcon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--main);
+    text-align: center;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+.adress .item .icon{
+    font-size: 3rem;
+    margin: 0 1rem;
+}
+
+.adress .item h4{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--main);
+}
+
+.item span{
+    color: var(--btncolor);
+    margin: 0 1rem;
+}
+
+
+@media screen and (max-width: 760px) {
+
+    .adress{
+        justify-content: start;
+        margin: 0.3rem;
+    }
+
+    .item .boxIcon{
+    width: 30px;
+    height: 30px;
+    }
+}
+
+
+@media screen and (max-width: 470px) {
+
+   .adress .item h4{
+    font-size: 1.3rem;
+   }
+
+   .adress .item{
+    margin: 0.4rem;
+   }
+
+   .box{
+    margin-bottom: 0;
+   }
+}
+
+
+@media screen and (max-width: 380px) {
+    .box .card{
+        width: 150px;
+    }
+}

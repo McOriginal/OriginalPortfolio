@@ -1,30 +1,12 @@
 
-.container{
-    width: 100%;
-    height: 100%;
-}
 
-.container .profile{
-    padding: 1rem;
-    margin-bottom: 2rem ;
-}
-
-.profile .title{
-    font-size: 6rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 1rem;
-    border: 2px dotted var(--main);
-    color: var(--main);
-    margin-bottom: 1.5rem;
-}
 
 .profile .name{
-    font-size: 2.4rem;
+    font-size: 1.5vw;
     color: var(--secondary);
     font-weight: 500;
     text-transform: capitalize;
-    margin: 2rem;
+    margin: 1vw;
 }
 
 .profile .name span{
@@ -35,59 +17,82 @@
 
 
 .profile .description{
-    font-size: 2rem;
+    font-size: 1.2vw;
     color: var(--secondary);
-    margin: 2rem;
     text-transform: capitalize;
+    margin: 0 0.8vw;
 }
 
 
-.container .box{
-    height: 40vh;
+ .box{
     display: flex;
+    height: 50%;
     justify-content: start;
     align-items: center;
+    margin-top: 2rem;
 }
 
 
-.container .box .left{
+ .box .left{
     width: 60%;
     height: 100%;
     background: var(--main);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 1vw;
 }
 
 
-.container .box .left .boxText{
-    width: 30rem;
-    height: 10rem;
-    margin: 1rem;
-    padding: 1rem;
+ .box .left .boxText{
+    padding: 0.5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+ .box .left .boxText{
+    padding: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: count 2s ease-in-out ;
+}
+
+
+@keyframes count {
+    10% {
+        transform: scale(3);
+    }
+    90% {
+        transform: scale(1);
+    }
+}
+
+
 .boxText h2{
-    font-size: 5rem;
+    font-size: 2vw;
     text-align: center;
     letter-spacing: 2px;
 }
 
+
+
+
+
 .boxText p{
-    font-size: 1.7rem;
+    font-size: 1vw;
     text-transform: capitalize;
     font-weight: 500;
+    text-align: center;
 }
 
-.container .box .right{
+ .box .right{
     height: 100%;
     width: 40%;
-    margin-left: 1rem;
+    margin-left: 1vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -95,9 +100,11 @@
 }
 
 .box .right h3{
-    font-size: 2.4rem;
+    font-size: 1.3vw;
     color: var(--main);
-    text-align: center;
+    text-align: left;
+    text-transform: capitalize;
+    text-decoration: underline;
 }
 
 
@@ -108,19 +115,120 @@
 }
 
 .box .content .icon{
-    width: 5rem;
-    height: 5rem;
+    width: 3vw;
+    height: 3vw;
     object-fit: cover;
-    margin-right: 2rem;
+    margin-right: 1vw;
 }
 
 .box .content h4{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1vw;
+    margin-bottom: 0.2vw;
     color: var(--main);
 }
 
 .box .content p{
-    font-size: 1.2rem;
+    font-size: 0.9vw;
     color: var(--secondary);
+}
+.menu{
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+     .box{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+        height: 55vh;
+
+    }
+
+    .profile .name{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .profile .description{
+        font-size: 1.2rem;
+    }
+
+     .box .left{
+        width: 100%;
+    }
+
+    .boxText h2{
+        font-size: 4rem;
+    }
+
+    .boxText p{
+        font-size: 1.5rem;
+    }
+
+
+
+     .box .right{
+        margin-top: 2vw;
+        width: 100%;
+        align-items: start;
+    }
+
+    .box .right .content{
+        flex-direction: row;
+    }
+
+    .box .right h3{
+        font-size: 2.3vw;
+    }
+
+    .box .right .content h4{
+        font-size: 1.5rem;
+        margin-top: 0.8rem;
+    }
+
+    .box .right .content p{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (max-width: 470px) {
+    
+    .profile .name{
+        font-size: 1.3rem;
+        margin: 1rem auto;
+    }
+     .boxText h2{
+        font-size: 3rem;
+    }
+
+    .boxText p{
+        font-size: 1.1rem;
+    }
+
+    .box .right h3{
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0.4rem auto;
+    }
+
+    .box .right .content h4{
+        font-size: 1.2rem;
+    }
+
+    .box .right .content .icon{
+        width: 15vw;
+    }
+
+    .box .right .content{
+        margin: 0.4rem 0;
+    }
+
+
+
+    .menu{
+        display: block;
+        font-size: 4rem;
+        position: absolute;
+    }
 }
