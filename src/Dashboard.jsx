@@ -8,6 +8,7 @@ import { useState } from 'react';
 import AboutPage from './AboutPage';
 import { TiArrowSortedUp } from "react-icons/ti";
 import Contact from './Contact';
+import Projects from './Projects';
 
 export default function Dashboard(){
   const [selectedContent, setSelectedContent] = useState(<AboutPage/> );
@@ -36,7 +37,7 @@ export default function Dashboard(){
                 <ul>
                     <li><p>Home  </p> <IoHome  className={classes.icon} /> </li>
                     <li onClick={()=> handleContent(<AboutPage /> )}><p>Qui suis-je </p> <FaUser  className={classes.icon} /></li>
-                    <li onClick={()=> handleContent("Mes Projets")}><p>Projets </p> <FaSitemap className={classes.icon} /> </li>
+                    <li onClick={()=> handleContent(<Projects /> )}><p>Projets </p> <FaSitemap className={classes.icon} /> </li>
                     <li onClick={()=> handleContent(<Contact /> )}><p>Contact </p> <MdPermContactCalendar className={classes.icon}  /></li>
                 </ul>
             </nav>
