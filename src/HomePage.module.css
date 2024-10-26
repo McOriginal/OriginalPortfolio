@@ -165,8 +165,31 @@
     animation: btn infinite 2s linear;
 }
 
+.left a{
+    display: block;
+    width: 25rem;
+    text-decoration: none;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 10px;
+    margin-left: 2rem;
+    color: var(--lightcolor);
+    background: transparent;
+    text-transform: capitalize;
+    border: 2px solid var(--lightcolor);
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all ease-in-out 0.3s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px var(--lightcolor);
+    animation: btn infinite 2s linear;
+}
 
 
+
+.left a::before,
 .left button::before {
     content: '';
     position: absolute;
@@ -188,10 +211,12 @@
 
 
 
+.left a:hover::before,
 .left button:hover::before {
     transform: scaleX(1);
 }
 
+.left a:hover,
 .left button:hover{
     transform: scale(1.1);
 }
@@ -245,9 +270,11 @@
 
 
 @media screen and (max-width: 660px) {
+
     #section{
         flex-direction: column-reverse;
         height: auto;
+        overflow-y: auto;
     }
 
     .left, .right{
@@ -272,13 +299,15 @@
         margin: 0;
         height: 100vh;
     }
+
+
     
     .left h1{
         font-size: 4rem;
     }
 
     .left h1 span{
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .left .profile{
@@ -290,14 +319,34 @@
         padding-top: 2rem;
     }
 
+    .contente .description{
+        font-size: 1.5rem;
+    }
+
     .box_btn{
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
     }
 
+    .box_btn a,
     .box_btn button{
         display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 1rem auto;
         margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+   .left h1{
+        font-size: 2.5rem;
+        margin: 2rem auto;
+    }
+
+    .left span{
+        font-size: 2.5rem;
     }
 }

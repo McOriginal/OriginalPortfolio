@@ -6,10 +6,10 @@
     right: 4%;
     width: 8rem;
     height: 70vh;
-    background: var(--main);
-    border: 2px solid var(--btncolor);
+    background: var(--lightcolor);
+    border: 2px solid var(--main);
     border-radius: 30px;
-    box-shadow: 0px 2px 10px var(--btncolor);
+    box-shadow: 0px 2px 10px var(--main);
     transform: translateX(100px);
     transition: all ease-in-out 0.4s;
     animation: shadow 4s infinite linear, displaying 2s forwards;
@@ -25,22 +25,22 @@
 
 @keyframes shadow {
     0%{
-        border-color:  #f5623224;
+        border-color:  #22026124;
     }
 
     20%{
-        border-color:  #f41b92dd;
+        border-color:  #0e0678c0;
     }
     50%{
-        border-color:  var(--btncolor);
+        border-color:  var(--main);
     }
 
     60%{
-        border-color:  #f453;
+        border-color:  rgba(8, 1, 58, 0.747);
     }
 
     80%{
-        border-color:  #f09588;
+        border-color:  #822bd9;
     }
 
     100%{
@@ -64,7 +64,7 @@
     text-align: center;
     border-radius: 50%;
     position: relative;
-    background: var(--btncolor);
+    background: var(--main);
     cursor: pointer;
     box-shadow: 0px 0px 5px var(--lightcolor);
     transition: all 0.2s ease-in-out;
@@ -80,8 +80,10 @@
     transition: all 0.2s ease-in-out;
 }
 
+.icon_box.active,
 .icon_box:hover{
     background: var(--btncolor);
     color: var(--lightcolor);
+    box-shadow: 0px 0px 5px var(--main);
     transform: scale(1.13);
 }

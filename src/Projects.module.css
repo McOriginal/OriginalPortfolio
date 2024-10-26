@@ -40,10 +40,50 @@
 }
 
 
-.projects{
-    width: 65%;
+
+
+.modal{
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 105vh;
     position: absolute;
-    right: 4%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.5);
+    overflow: auto;
+    animation: opening 1s ease forwards;
+}
+
+@keyframes opening {
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close{
+    font-size: 5rem;
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+
+
+.projects{
+    width: 90%;
+    min-width: 94%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 1rem;
     margin: 1rem auto;
 }
 
@@ -124,39 +164,24 @@
     background: var(--main);
     color: var(--lightcolor);
     border: 1px solid var(--lightcolor);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 
-
-@media screen and (max-width: 795px) {
-    .card{
-        width: 130px;
-    }
-
-    .projects{
-        width: 60%;
-    }
-}
 
 @media screen and (max-width: 510px) {
     .boxBtn button{
         font-size: 1rem;
     }
 
-    .projects{
-        left: 40%;
-        width: 50%;
-    }
+
 }
 @media screen and (max-width: 450px) {
-    .projects{
-        right: 0%;
-        left: 10%;
-    }
 
-    .card{
+
+    /* .card{
         width: 150px;
-    }
+    } */
 
     .text{
         font-size: 2rem;
@@ -168,9 +193,7 @@
 }
 
 @media screen and (max-width: 290px) {
-    .projects{
-        width: 70%;
-    }
+
     .boxBtn button{
         width: 25vw;
     }

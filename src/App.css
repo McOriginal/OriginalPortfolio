@@ -30,6 +30,17 @@ html{
 .container{
     width: 90%;
     height: 100vh;
+    opacity: 0;
+    transform: translateY(-70px);
+    animation: sliding 3s ease forwards;
+    overflow: hidden;
+}
+
+@keyframes sliding {
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 
@@ -45,6 +56,9 @@ html{
 }
 
 
+
+
+
 @media screen and (max-width: 470px) {
   .title{
         font-size: 3rem;
@@ -53,6 +67,5 @@ html{
 
     .container{
         width: 100%;
-        overflow: scroll;
     }
 }

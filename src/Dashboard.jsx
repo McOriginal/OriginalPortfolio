@@ -1,5 +1,4 @@
-
-import classes from './Dashboard.module.css'
+import classes from './Dashboard.module.css';
 import { IoHome } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { FaSitemap } from "react-icons/fa6";
@@ -9,21 +8,31 @@ import AboutPage from './AboutPage';
 import { TiArrowSortedUp } from "react-icons/ti";
 import Contact from './Contact';
 import Projects from './Projects';
+import { useNavigate } from 'react-router-dom';
+import NavLinkIcons from './NavLinkIcons';
 
 export default function Dashboard(){
   const [selectedContent, setSelectedContent] = useState(<AboutPage/> );
   const [hideDashboard, setHideDachboard] = useState(false);
+  const [activeButton, setActiveButton] = useState('about');
+
+  const navigate = useNavigate();
+
+  const HomePage = ()=>{
+    navigate('/');
+  }
 
 
-  function handleContent(selectedPage){
+  function handleContent(selectedPage, buttonName){
     setSelectedContent(selectedPage);
+    setActiveButton(buttonName);
   } 
 
   return(
     <>
     
       <section id={classes.main}>
-
+        
         <div className={classes.dashboard} id={hideDashboard ? classes.dashboard_hide : classes.dashboard_displaying}>
                
             <div className={classes.boxImg}>
@@ -35,10 +44,12 @@ export default function Dashboard(){
 
             <nav>
                 <ul>
-                    <li><p>Home  </p> <IoHome  className={classes.icon} /> </li>
-                    <li onClick={()=> handleContent(<AboutPage /> )}><p>Qui suis-je </p> <FaUser  className={classes.icon} /></li>
-                    <li onClick={()=> handleContent(<Projects /> )}><p>Projets </p> <FaSitemap className={classes.icon} /> </li>
-                    <li onClick={()=> handleContent(<Contact /> )}><p>Contact </p> <MdPermContactCalendar className={classes.icon}  /></li>
+                    <button className={activeButton === 'home' ? classes.active : ''} onClick={() => { HomePage(); setActiveButton('home'); }}>Home <IoHome className={classes.icon} /></button>
+                    <button className={activeButton === 'about' ? classes.active : ''} onClick={() => handleContent(<AboutPage />, 'about')}>Qui suis-je <FaUser className={classes.icon} /></button>
+                    <button className={activeButton === 'projects' ? classes.active : ''} onClick={() => handleContent(<Projects />, 'projects')}>Projets <FaSitemap className={classes.icon} /></button>
+                    <button className={activeButton === 'contact' ? classes.active : ''} onClick={() => handleContent(<Contact />, 'contact')}>Contact <MdPermContactCalendar className={classes.icon} /></button>
+
+                   
                 </ul>
             </nav>
         </div>
@@ -49,8 +60,9 @@ export default function Dashboard(){
           {selectedContent}
         </div>
 
-
     </section>
+
+    <NavLinkIcons />
 
     </>
   );

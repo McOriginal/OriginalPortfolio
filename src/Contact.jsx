@@ -9,27 +9,25 @@ export default function Contact(){
 
     return (
         <>
-        <div className='contact'>
+        <div className='container'>
             <h1 className="title"> Contact</h1>
 
-            <p className={classes.text}>Prends juste <span>10 seconde</span> pour commander votre  </p>
+            <p className={classes.text}>Prenez juste <span>10 secondes</span> pour commander votre service.</p>
 
             <div className={classes.box}>
+                <BoxCard
+                type={"Site web"}
+                description={"Création de sites web sur mesure."}
+                price1={"100 000"}
+                price2={"152"}
+                />
 
-            <BoxCard
-            type={"Site web"}
-            description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
-            price1={"100 000"}
-            price2={"152"}
-            />
-
-            <BoxCard
-            type={"Application mobile"}
-            description={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
-            price1={"150 000"}
-            price2={"228"}
-            />
-            
+                <BoxCard
+                type={"Application mobile"}
+                description={"Développement d'applications mobiles innovantes."}
+                price1={"150 000"}
+                price2={"228"}
+                />
             </div>
 
             <div className={classes.adress}>

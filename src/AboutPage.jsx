@@ -10,11 +10,10 @@ export default function AboutPage(){
 
                 <div className={classes.profile}>
                     <h1 className='title'> Qui suis-je ?</h1>
-                <p className={classes.name}>Je suis <span>Cissé Mohamed,</span> Développeur <span>web/mobile,</span> Full Stack </p>
-
-                <p className={classes.description}>Développeur web avec 3 ans d'expérience en freelance, spécialisé en création de sites front-end et full stack. Maîtrise des technologies HTML, CSS, JavaScript, React.js, Node.js et Flutter pour le développement d'applications Android. Capable de livrer des solutions innovantes et efficaces. 
-                    Toujours à la recherche de nouvelles opportunités pour enrichir ses compétences.</p>
-                    
+                    <p className={classes.name}>Je suis <span>Cissé Mohamed,</span> Développeur <span>web/mobile,</span> Full Stack </p>
+                    <p className={classes.description}>
+                        Développeur web avec 3 ans d'expérience en freelance, spécialisé dans la création de sites front-end et full stack. Je maîtrise les technologies HTML, CSS, JavaScript, React.js, Node.js et Flutter pour le développement d'applications Android. Je suis capable de fournir des solutions innovantes et efficaces, tout en étant toujours à la recherche de nouvelles opportunités pour enrichir mes compétences.
+                    </p>
                 </div>
 
                 <div className={classes.box}>
@@ -25,15 +24,15 @@ export default function AboutPage(){
                         </div>
                         <div className={classes.boxText}>
                             <h2>10+</h2>
-                            <p>projets réalisé</p>
+                            <p>projets réalisés</p>
                         </div>
                         <div className={classes.boxText}>
                             <h2>50+</h2>
-                            <p>clients satistait</p>
+                            <p>clients satisfaits</p>
                         </div>
                         <div className={classes.boxText}>
-                            <h2>10K</h2>
-                            <p>abonnée</p>
+                            <h2>10+</h2>
+                            <p>technologies</p>
                         </div>
                     </div>
 
@@ -44,8 +43,8 @@ export default function AboutPage(){
                             <div className={classes.content}>
                                 <img src='ui.png' alt='Ui UX' className={classes.icon} />
                                 <div>
-                                <h4>UI UX design</h4>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, amet.</p>
+                                <h4>UI/UX Design</h4>
+                                <p>Création d'interfaces utilisateur intuitives et esthétiques.</p>
                                 </div>
                             </div>
                         
@@ -55,8 +54,8 @@ export default function AboutPage(){
 
                                 <img src='web.png' alt='Web' className={classes.icon} />
                                 <div>
-                                <h4>Conception des sites web</h4>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, amet.</p>
+                                <h4>Conception de sites web</h4>
+                                <p>Développement de sites web réactifs et performants.</p>
                                 </div>
                             </div>
                         
@@ -66,8 +65,8 @@ export default function AboutPage(){
 
                                 <img src='app.png' alt='app' className={classes.icon} />
                                 <div>
-                                <h4>Conception des Application Mobile</h4>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, amet.</p>
+                                <h4>Développement d'applications mobiles</h4>
+                                <p>Création d'applications mobiles fonctionnelles et attrayantes.</p>
                                 </div>
                             </div>
                         

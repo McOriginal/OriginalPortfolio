@@ -17,6 +17,7 @@
     border-radius: 0.4rem;
     background: var(--main);
     z-index: 1;
+    /* position: fixed; */
     transition: all ease 1s;
 }
 
@@ -51,9 +52,13 @@
     align-items: center;
 }
 
-nav ul li{
-    list-style: none;
+nav ul button{
     width: 20rem;
+    display: block;
+    background: transparent;
+    border: 1px solid var(--lightcolor);
+    border-radius: 1rem;
+    font-size: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,16 +67,15 @@ nav ul li{
     transition: all ease-in-out 0.4s;
 }
 
-nav ul li:hover{
+nav ul button.active,
+nav ul button:hover{
     transform: scale(1.1);
-    text-shadow: 0px 0px 10px var(--bg), 1px 1px 15px var(--lightcolor);
+    box-shadow: 0px 0px 5px var(--bg), 1px 1px 15px var(--lightcolor);
 }
 
-nav ul li p{
-    font-size: 2rem;
-}
 
-li .icon{
+
+button .icon{
     font-size: 2.3rem;
     text-align: center;
 }
@@ -81,6 +85,7 @@ li .icon{
     width: 100%;
     height: 100vh;
     padding: 1rem 2rem;
+    overflow: hidden;
     color: var(--main);
     background: var(--bg);
 }
@@ -108,7 +113,7 @@ li .icon{
     display: block;
     position: absolute;
     left: -3%;
-    bottom: 38%;
+    bottom: 30%;
     transform: rotate(90deg);
     animation: rotation .5s infinite linear;
 }
