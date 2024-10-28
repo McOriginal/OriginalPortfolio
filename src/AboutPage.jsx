@@ -23,7 +23,7 @@ export default function AboutPage(){
                             <p>ans d'expérience</p>
                         </div>
                         <div className={classes.boxText}>
-                            <h2>10+</h2>
+                            <h2>70+</h2>
                             <p>projets réalisés</p>
                         </div>
                         <div className={classes.boxText}>
