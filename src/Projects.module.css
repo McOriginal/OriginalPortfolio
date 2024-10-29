@@ -87,13 +87,7 @@
     margin: 1rem auto;
 }
 
-.slick-slide {
-    margin: 0 10px; /* Ajout d'un espacement entre les slides */
-}
 
-.slick-prev, .slick-next {
-    z-index: 1; /* Assurez-vous que les flèches sont au-dessus des autres éléments */
-}
 
 .button {
     background-color: var(--main);

@@ -10,6 +10,12 @@ import Contact from './Contact';
 import Projects from './Projects';
 import { useNavigate } from 'react-router-dom';
 import NavLinkIcons from './NavLinkIcons';
+import { MdDeveloperMode } from "react-icons/md";
+import Technologie from './Technologie';
+
+
+
+
 
 export default function Dashboard(){
   const [selectedContent, setSelectedContent] = useState(<AboutPage/> );
@@ -44,10 +50,11 @@ export default function Dashboard(){
 
             <nav>
                 <ul>
-                    <button className={activeButton === 'home' ? classes.active : ''} onClick={() => { HomePage(); setActiveButton('home'); }}>Home <IoHome className={classes.icon} /></button>
+                    <button className={activeButton === 'home' ? classes.active : ''} onClick={() => { HomePage(); setActiveButton('home'); }}>Accueil <IoHome className={classes.icon} /></button>
                     <button className={activeButton === 'about' ? classes.active : ''} onClick={() => handleContent(<AboutPage />, 'about')}>Qui suis-je <FaUser className={classes.icon} /></button>
                     <button className={activeButton === 'projects' ? classes.active : ''} onClick={() => handleContent(<Projects />, 'projects')}>Projets <FaSitemap className={classes.icon} /></button>
                     <button className={activeButton === 'contact' ? classes.active : ''} onClick={() => handleContent(<Contact />, 'contact')}>Contact <MdPermContactCalendar className={classes.icon} /></button>
+                    <button className={activeButton === 'techno' ? classes.active : ''} onClick={() => handleContent(<Technologie />, 'techno')}>Technologie <MdDeveloperMode className={classes.icon} /></button>
 
                    
                 </ul>
