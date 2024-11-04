@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './Home/HomePage';
 
 const route = createBrowserRouter([
-  {path: 'cissemohamed.com', element: <HomePage /> },
+  {path: '/', element: <HomePage /> },
   {path: '/dashboard', element: <Dashboard /> }
 ])
 
