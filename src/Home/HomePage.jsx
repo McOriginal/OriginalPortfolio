@@ -20,7 +20,7 @@ export default function HomePage() {
                         <h1>Je suis, <span></span></h1>
                         <p className={classes.description}> Développeur full stack passionné.</p>  
                         <p className={classes.profile}>
-                            Développeur web avec 3 ans d'expérience en freelance, spécialisé dans la création de sites front-end et full stack. Je maîtrise les technologies HTML, CSS, JavaScript, React.js, Node.js et Flutter pour le développement d'applications Android. Je suis capable de fournir des solutions innovantes et efficaces, tout en étant toujours à la recherche de nouvelles opportunités pour enrichir mes compétences.
+                             avec 3 ans d'expérience en développement web et mobile, je suis spécialisé dans la création de sites front-end et full stack. Je maîtrise les technologies HTML, CSS, JavaScript, React.js, Node.js et Flutter pour le développement d'applications Android. Je suis capable de fournir des solutions innovantes et efficaces, tout en étant toujours à la recherche de nouvelles opportunités pour enrichir mes compétences.
                         </p>
                         <div className={classes.box_btn}>
                             <button onClick={AboutMe}>Qui suis-je  <FaQuestionCircle /></button>

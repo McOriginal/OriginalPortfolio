@@ -17,8 +17,6 @@ import { MdDeveloperMode } from "react-icons/md";
 
 
 
-
-
 export default function Dashboard(){
   const [selectedContent, setSelectedContent] = useState(<AboutPage/> );
   const [hideDashboard, setHideDachboard] = useState(false);
