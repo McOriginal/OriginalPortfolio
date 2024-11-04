@@ -1,17 +1,19 @@
 import classes from './Dashboard.module.css';
+import Projects from '../Projects/Projects';
+import AboutPage from '../About/AboutPage';
+import NavLinkIcons from '../NavLinks/NavLinkIcons';
+import Technologie from '../Technologie/Technologie';
+import Contact from '../Contact/Contact';
+
+
 import { IoHome } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { FaSitemap } from "react-icons/fa6";
 import { MdPermContactCalendar } from "react-icons/md";
 import { useState } from 'react';
-import AboutPage from './AboutPage';
 import { TiArrowSortedUp } from "react-icons/ti";
-import Contact from './Contact';
-import Projects from './Projects';
 import { useNavigate } from 'react-router-dom';
-import NavLinkIcons from './NavLinkIcons';
 import { MdDeveloperMode } from "react-icons/md";
-import Technologie from './Technologie';
 
 
 

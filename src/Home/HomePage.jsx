@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import classes from './HomePage.module.css';
-import NavLinkIcons from './NavLinkIcons';
+import NavLinkIcons from '../NavLinks/NavLinkIcons';
 import { FaDownload } from "react-icons/fa";
 import { FaQuestionCircle } from "react-icons/fa";
 

@@ -1,5 +1,5 @@
 import classes from './Contact.module.css';
-import BoxCard from './BoxCard';
+import BoxCard from '../Projects/BoxCard';
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaMapMarkerAlt } from "react-icons/fa";
