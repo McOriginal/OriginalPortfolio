@@ -6,22 +6,23 @@ import Technologie from '../Technologie/Technologie';
 import Contact from '../Contact/Contact';
 
 
+import { TiArrowSortedUp } from "react-icons/ti";
+import { useState } from 'react';
+
 import { IoHome } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { FaSitemap } from "react-icons/fa6";
 import { MdPermContactCalendar } from "react-icons/md";
-import { useState } from 'react';
-import { TiArrowSortedUp } from "react-icons/ti";
 import { useNavigate } from 'react-router-dom';
 import { MdDeveloperMode } from "react-icons/md";
-
-
+import { BiSolidShow } from "react-icons/bi";
+import { IoEyeOff } from "react-icons/io5";
 
 export default function Dashboard(){
   const [selectedContent, setSelectedContent] = useState(<AboutPage/> );
   const [hideDashboard, setHideDachboard] = useState(false);
   const [activeButton, setActiveButton] = useState('about');
-
+  const [show, setShow] = useState(true);
   const navigate = useNavigate();
 
   const HomePage = ()=>{
@@ -50,11 +51,11 @@ export default function Dashboard(){
 
             <nav>
                 <ul>
-                    <button className={activeButton === 'home' ? classes.active : ''} onClick={() => { HomePage(); setActiveButton('home'); }}>Accueil <IoHome className={classes.icon} /></button>
-                    <button className={activeButton === 'about' ? classes.active : ''} onClick={() => handleContent(<AboutPage />, 'about')}>Qui suis-je <FaUser className={classes.icon} /></button>
-                    <button className={activeButton === 'projects' ? classes.active : ''} onClick={() => handleContent(<Projects />, 'projects')}>Projets <FaSitemap className={classes.icon} /></button>
-                    <button className={activeButton === 'contact' ? classes.active : ''} onClick={() => handleContent(<Contact />, 'contact')}>Contact <MdPermContactCalendar className={classes.icon} /></button>
-                    <button className={activeButton === 'techno' ? classes.active : ''} onClick={() => handleContent(<Technologie />, 'techno')}>Technologie <MdDeveloperMode className={classes.icon} /></button>
+                    <button className={activeButton === 'home' ? classes.active : ''} onClick={() => { HomePage(); setActiveButton('home', setHideDachboard(true)) }}>Accueil <IoHome className={classes.icon} /></button>
+                    <button className={activeButton === 'about' ? classes.active : ''} onClick={() => handleContent(<AboutPage />, 'about', setHideDachboard(true))}>Qui suis-je <FaUser className={classes.icon} /></button>
+                    <button className={activeButton === 'projects' ? classes.active : ''} onClick={() => handleContent(<Projects />, 'projects', setHideDachboard(true))}>Projets <FaSitemap className={classes.icon} /></button>
+                    <button className={activeButton === 'contact' ? classes.active : ''} onClick={() => handleContent(<Contact />, 'contact', setHideDachboard(true))}>Contact <MdPermContactCalendar className={classes.icon} /></button>
+                    <button className={activeButton === 'techno' ? classes.active : ''} onClick={() => handleContent(<Technologie />, 'techno', setHideDachboard(true))}>Technologie <MdDeveloperMode className={classes.icon} /></button>
 
                    
                 </ul>
@@ -69,8 +70,11 @@ export default function Dashboard(){
 
     </section>
 
-    <NavLinkIcons />
+            {show && <NavLinkIcons /> }
 
+            {!show &&  <BiSolidShow className='show' onClick={()=> setShow(true)} /> }
+
+            {show && <IoEyeOff className='anshow' onClick={()=> setShow(false)} /> }
     </>
   );
 }

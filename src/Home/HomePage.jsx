@@ -1,11 +1,21 @@
-import { useNavigate } from 'react-router-dom';
 import classes from './HomePage.module.css';
 import NavLinkIcons from '../NavLinks/NavLinkIcons';
+
+
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+
 import { FaDownload } from "react-icons/fa";
 import { FaQuestionCircle } from "react-icons/fa";
+import { BiSolidShow } from "react-icons/bi";
+import { IoEyeOff } from "react-icons/io5";
+
+
 
 export default function HomePage() {
     const navigate = useNavigate();
+    const [show, setShow] = useState(true);
 
     const AboutMe = () => {
         navigate('/dashboard');
@@ -32,7 +42,15 @@ export default function HomePage() {
                     <img src="me.png" alt="Cissé" />
                 </div>
             </section>
-            <NavLinkIcons />
+
+            {show && <NavLinkIcons /> }
+
+            {!show &&  <BiSolidShow className='show' onClick={()=> setShow(true)} /> }
+
+            {show && <IoEyeOff className='anshow' onClick={()=> setShow(false)} /> }
+
+           
+           
         </>
     );
 }

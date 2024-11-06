@@ -72,3 +72,24 @@ html{
 
 
 
+.show{
+  font-size: 3rem;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  background: var(--main);
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.anshow{
+  font-size: 3rem;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  background: var(--main);
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
