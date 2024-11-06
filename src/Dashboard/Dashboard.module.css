@@ -111,7 +111,7 @@ button .icon{
 
 .arrowRight{
     display: block;
-    position: absolute;
+    position: fixed;
     left: -3%;
     bottom: 30%;
     transform: rotate(90deg);
@@ -135,6 +135,7 @@ button .icon{
 
 .dashboard{
     position: absolute;
+    min-height: 110vh;
 }
 
 

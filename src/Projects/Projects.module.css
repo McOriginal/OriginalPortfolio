@@ -66,9 +66,10 @@
 
 .close{
     font-size: 5rem;
-    position: absolute;
+    position: fixed;
     top: 3%;
     right: 1%;
+    background: var(--main);
     cursor: pointer;
     transition: all ease-in-out 0.5s;
 }
