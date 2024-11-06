@@ -58,23 +58,9 @@ html{
 
 
 
-
-@media screen and (max-width: 470px) {
-  .title{
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
-
-    .container{
-        width: 100%;
-    }
-}
-
-
-
 .show{
   font-size: 3rem;
-  position: absolute;
+  position: fixed;
   bottom: 10%;
   right: 5%;
   background: var(--main);
@@ -85,7 +71,7 @@ html{
 
 .anshow{
   font-size: 3rem;
-  position: absolute;
+  position: fixed;
   bottom: 10%;
   right: 5%;
   background: var(--main);
@@ -93,3 +79,22 @@ html{
   border-radius: 50%;
   cursor: pointer;
 }
+
+
+
+@media screen and (max-width: 470px) {
+  .title{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .show, .anshow{
+      right: 8%;
+    }
+}
+
+
